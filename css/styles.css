@@ -1,31 +1,28 @@
-html {
-    height: 100%;
-    width: 100%;
+body {
+    background-color: olivedrab;
+    text-align: center;
 }
 
-header {
+img {
     height: 200px;
     width: 200px;
+    padding: 100px;
+    margin: 20px;
+    justify-content: space-evenly;
+    justify-content: space-between;
+}
+
+h1 {
     font-size: large;
+    color: blanchedalmond;
+    text-align: center;
+    font-weight: bold;
 }
 
-.container-bag {
-    width: 80%;
-    margin: 20px;
-    padding: 20px;
-    border: solid teal; 
+#results {
+    grid-column: 2/3;
+    grid-row: 2/3;
 }
 
-.container-banana {
-    width: 80%;
-    margin: 20px;
-    padding: 20px;
-    border: solid cyan; 
-}
-
-.container-bathroom {
-    width: 80%;
-    margin: 20px;
-    padding: 20px;
-    border: solid aquamarine;
+#results-button {
 }
