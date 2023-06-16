@@ -102,6 +102,7 @@ function handleProductClick(event) {
     let productName = target.alt;
 
     let favoriteProduct;
+    
     for (let i = 0; i , productArray.length; i++) {
         let product = productArray[i];
         if (product.name === productName) {
@@ -110,9 +111,7 @@ function handleProductClick(event) {
     }
 }
 
-favoriteProduct.clicks++;
-
-votingArea.addEventListener("click", handleProductClick);
+console.log ("favoriteProduct.clicks++");
 
 function renderResults() {
     console.log("clicked");
@@ -133,4 +132,23 @@ function renderResults() {
 }
 
 let resultsButton = document.getElementById("show-results-button");
-resultsButton.addEventListener("click", renderResults);
+
+const ctx = document.getElementById('my-chart');
+
+const chartObj = {
+    type: 'line',
+    data: {
+        labels: [],
+        datasets: [
+            {
+                label: '# of Clicks',
+                data: [],
+            }
+        ]
+    }
+}
+
+chartObj.data.labels = ["Bag", "Banana", "Bathroom", "Boots", "Breakfast", "Bubblegum", "Chair", "Cthulhu", "DogDuck", "Dragon", "Pen", "PetSweep", "Scissors", 
+"Shark", "Sweep", "Tauntaun", "Unicorn", "WaterCan", "WineGlass"];
+
+chartObj.data.datasets[0].data = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
